@@ -17,11 +17,13 @@ This is my first application based on CQRS architecture. The example is focused 
 
 * First, install and run [Apache Kafka](https://kafka.apache.org/)
 
+    
     # init zookeeper
     bin/zookeeper-server-start.sh config/zookeeper.properties
     
     # Then init kafka
     bin/kafka-server-start.sh config/server.properties
+    
 
 *Testing Kafka Consumer:*
 
