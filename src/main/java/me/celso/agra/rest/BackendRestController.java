@@ -24,7 +24,7 @@ public class BackendRestController {
 	private InformationReadService queryService;
 
 	@PostMapping(value = "/message")
-	public void commandcreate(@RequestParam("message") String message) {
+	public void commandCreate(@RequestParam("message") String message) {
 		this.commandService.create(Information.newInstance(message));
 	}
 
