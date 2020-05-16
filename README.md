@@ -13,11 +13,25 @@ This is my first application based on CQRS architecture. The example is focused 
 
 ![architecture](doc/cqrs_architecture.svg "Architecture")
 
-## Configuring
+## Configuring Kafka
 
-* First, configure [Apache Kafka](https://kafka.apache.org/)
+* First, install and run [Apache Kafka](https://kafka.apache.org/)
 
-## Testing
+    # init zookeeper
+    bin/zookeeper-server-start.sh config/zookeeper.properties
+    
+    # Then init kafka
+    bin/kafka-server-start.sh config/server.properties
+
+*Testing Kafka Consumer:*
+
+    $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --group group_id
+
+*Testing Kafka Provider:*
+
+    $KAFKA_HOME/bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic test
+
+## Testing Example
 
 #### POST Method
 
